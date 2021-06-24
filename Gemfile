@@ -2,11 +2,17 @@ source "https://rubygems.org"
 git_source(:github){|repo| "https://github.com/#{repo}.git"}
 
 ruby "2.7.0"
+gem "bcrypt"
 gem "bootsnap", ">= 1.4.4", require: false
+gem "bootstrap", "~> 4.6.0"
+gem "faker"
+gem "font-awesome-sass", "~> 5.10.0"
 gem "jbuilder", "~> 2.7"
+gem "jquery-rails"
 gem "mysql2", "~> 0.5"
 gem "puma", "~> 5.0"
 gem "rails", "~> 6.1.3", ">= 6.1.3.2"
+gem "rails-i18n"
 gem "rubocop", "~> 0.74.0", require: false
 gem "rubocop-checkstyle_formatter", require: false
 gem "rubocop-rails", "~> 2.3.2", require: false

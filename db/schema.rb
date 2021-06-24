@@ -12,14 +12,14 @@
 
 ActiveRecord::Schema.define(version: 2021_06_22_073321) do
 
-  create_table "categories", charset: "latin1", force: :cascade do |t|
+  create_table "categories", charset: "utf8mb4", force: :cascade do |t|
     t.string "name"
     t.integer "parent_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "evaluates", charset: "latin1", force: :cascade do |t|
+  create_table "evaluates", charset: "utf8mb4", force: :cascade do |t|
     t.bigint "product_id", null: false
     t.bigint "user_id", null: false
     t.string "content"
@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 2021_06_22_073321) do
     t.index ["user_id"], name: "index_evaluates_on_user_id"
   end
 
-  create_table "order_details", charset: "latin1", force: :cascade do |t|
+  create_table "order_details", charset: "utf8mb4", force: :cascade do |t|
     t.bigint "order_id", null: false
     t.bigint "product_id", null: false
     t.integer "quatity"
@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 2021_06_22_073321) do
     t.index ["product_id"], name: "index_order_details_on_product_id"
   end
 
-  create_table "orders", charset: "latin1", force: :cascade do |t|
+  create_table "orders", charset: "utf8mb4", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.integer "status"
     t.string "address"
@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(version: 2021_06_22_073321) do
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
-  create_table "products", charset: "latin1", force: :cascade do |t|
+  create_table "products", charset: "utf8mb4", force: :cascade do |t|
     t.string "name"
     t.integer "quatity"
     t.bigint "category_id", null: false
@@ -62,7 +62,7 @@ ActiveRecord::Schema.define(version: 2021_06_22_073321) do
     t.index ["category_id"], name: "index_products_on_category_id"
   end
 
-  create_table "users", charset: "latin1", force: :cascade do |t|
+  create_table "users", charset: "utf8mb4", force: :cascade do |t|
     t.string "email"
     t.string "password_digest"
     t.string "fullname"

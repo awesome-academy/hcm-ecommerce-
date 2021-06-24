@@ -1,0 +1,80 @@
+<!-- Footer Start -->
+<div class="footer">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-3 col-md-6">
+        <div class="footer-widget">
+          <h2><%= t "footer.get_in_touch" %></h2>
+          <div class="contact-info">
+            <p><i class="fa fa-map-marker"></i><%= t "footer.address" %></p>
+            <p><i class="fa fa-envelope"></i>nhuthahuu@gmail.com</p>
+            <p><i class="fa fa-phone"></i>0386741177</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="footer-widget">
+          <h2><%= t "footer.follow_us" %></h2>
+          <div class="contact-info">
+            <div class="social">
+              <%= link_to "#" do %> 
+                <i class="fab fa-twitter"></i>
+              <% end %>
+              <%= link_to "#" do %>
+                <i class="fab fa-facebook-f"></i>
+              <% end %>
+              <%= link_to "#" do %>
+                <i class="fab fa-linkedin-in"></i>
+              <% end %>
+              <%= link_to "#" do %>
+                <i class="fab fa-instagram"></i>
+              <% end %>
+              <%= link_to "#" do %>
+                <i class="fab fa-youtube"></i>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="footer-widget">
+          <h2><%= t "footer.company" %></h2>
+          <ul>
+            <li><a href="#"><%= t "footer.about_us" %></a></li>
+            <li><a href="#"><%= t "footer.privacy" %></a></li>
+            <li><a href="#"><%= t "footer.term" %></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="footer-widget">
+          <h2><%= t "footer.purchase_info" %></h2>
+          <ul>
+            <li><%= link_to t("footer.payment_policy") %></li>
+            <li><%= link_to t("footer.shipping_policy") %></li>
+            <li><%= link_to t("footer.return_policy") %></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="row payment align-items-center">
+      <div class="col-md-6">
+        <div class="payment-method">
+          <h2><%= t "footer.accept" %></h2>
+          <%= image_tag "payment-method.png", alt:"Payment Method" %>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="payment-security">
+          <h2><%= t "footer.secure" %></h2>
+          <%= image_tag "godaddy.svg", alt:"Payment Security" %> <%= image_tag "norton.svg", alt:"Payment Security" %> <%= image_tag "ssl.svg", alt:"Payment Security" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Footer End -->

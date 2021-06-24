@@ -1,0 +1,48 @@
+$primary_color: #ff6f61;
+$background_color: #f3f6ff;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  color: #353535;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  background: $background_color;
+}
+
+a {
+  color: $primary_color;
+}
+
+a:hover,
+a:active,
+a:focus {
+  color: #353535;
+  outline: none;
+  text-decoration: none;
+}
+
+h1 {
+  font-family: "Source Code Pro", monospace;
+  font-weight: 900;
+}
+
+h2 {
+  font-family: "Source Code Pro", monospace;
+  font-weight: 700;
+}
+
+@media (min-width: 992px) {
+  .container-fluid {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+}
