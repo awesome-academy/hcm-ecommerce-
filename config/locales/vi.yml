@@ -1,4 +1,15 @@
 vi:
+  common:
+    menu:
+      profile: "Xem thông tin tài khoản"
+      order: "Lịch sử đơn hàng"
+      logout: "Đăng xuất"
+    flash:
+      login_success: "Đăng nhập thành công"
+      login_invalid: "Email hoặc mật khẩu không đúng"
+      login_required: "Email và mật khẩu không được trống"
+      success: "Thành công"
+      error: "Có lỗi"
   static_pages:
     home:
       feature:
@@ -27,3 +38,15 @@ vi:
       return_policy: "Chính sách trả hàng"
       accept: "Chúng tôi chấp nhận:"
       secure: "Bảo vệ bởi:"
+  sessions:
+    new:
+      main_title: "Đăng nhập"
+      sub_title: "Đăng ký"
+      privacy: "Chính sách bảo mật"
+      term: "Điều khoản và điều kiện"
+      btn_back: "Trờ về"
+      btn_login: "Đăng nhập"
+      input_email: "Email"
+      input_password: "Mật khẩu"
+      aside: "Nếu bạn không có tài khoản"
+      title_remember_me: "Nhớ thông tin"

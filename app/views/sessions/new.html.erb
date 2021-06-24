@@ -1,0 +1,24 @@
+<div class="wrapper-auth-form">
+  <div class="title">
+    <span class="left"><%= t ".main_title" %></span>
+    <a href="#" class="right"><%= t ".sub_title" %></a>
+  </div>
+  <%= form_for :session, url: login_path, method: :post  do |f|%>
+    <%= f.text_field :email, class:"auth-form-input", placeholder: t(".input_email") %>
+    <%= f.password_field :password, class:"auth-form-input", placeholder: t(".input_password") %>
+    <label for="remember" class="form-remember">
+      <%= f.check_box :remember, id: "remember" %>
+      <%= t ".title_remember_me" %>
+    </label>
+     
+    <div class="aside">
+      <p>
+        <%= t ".aside" %> <%= link_to t(".sub_title"), "#" , class: "register-link" %>
+      </p>
+    </div>
+    <div class="action">
+      <%= link_to t(".btn_back"), root_path , class: "btn" %>
+      <%= f.submit t(".btn_login"), class: "btn ml-12" %>
+    </div>
+  <% end %>
+</div>
