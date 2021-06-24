@@ -16,6 +16,12 @@ jobs:
         paths:
           - vendor/bundle
 
+  - name: build:node
+    stage: build
+    image: node:12-alpine
+    script:
+      - yarn
+
   - name: test:rspec
     stage: test
     image: sunci/ruby:2.7.0
@@ -28,6 +34,8 @@ jobs:
           MYSQL_PASSWORD: password_test
           MYSQL_ROOT_PASSWORD: password_test
     before_script:
+      - apt-get update --yes
+      - apt-get install --yes nodejs
       - bundle _2.1.2_ install --path vendor/bundle
     script:
       - RAILS_ENV=test bundle exec rails db:drop db:create db:migrate
