@@ -1,0 +1,29 @@
+vi:
+  static_pages:
+    home:
+      feature:
+        payment: "Thanh toán an toàn"
+        delivery: "Giao hàng toàn cầu"
+        return: "Trả hàng trong 90 ngày"
+        support: "Hỗ trợ 24/7"
+      session:
+        featured_product: "Sản phẩm nổi bật"
+        recent_product: "Sản phẩm xem gần đây"
+      product_card:
+        btn_buy: "Mua ngay"
+      title_search: "Tìm kiếm"
+      login: "Đăng nhập"
+    footer:
+      get_in_touch: "Liện Hệ"
+      address: "Thành phố Hồ Chí Minh"
+      follow_us: "Theo dõi chúng tối"
+      company: "Thông tin công ty"
+      about_us: "Về chúng tôi"
+      privacy: "Chính sách bảo mật"
+      term: "Điều khoản và điều kiện"
+      purchase_info: "Thông tin mua hàng"
+      payment_policy: "Chính sách thanh toán"
+      shipping_policy: "Chính sách giao hàng"
+      return_policy: "Chính sách trả hàng"
+      accept: "Chúng tôi chấp nhận:"
+      secure: "Bảo vệ bởi:"

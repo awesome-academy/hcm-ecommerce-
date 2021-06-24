@@ -1,0 +1,61 @@
+<!-- Top bar Start -->
+<div class="top-bar">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-6">
+        <i class="fa fa-envelope"></i>
+        nhuthahuu@gmail.com
+      </div>
+      <div class="col-sm-6">
+        <div class="row justify-content-end">
+          <div class="col-sm-3">
+            <i class="fa fa-phone-alt"></i>
+            0386741177
+          </div>
+          <div class="col-sm-3">
+            <%= link_to "English", "?locale=en", class: "locale" %> | <%= link_to "Vietnamese", "?locale=vi", class: "locale" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Top bar End -->
+
+<!-- Bottom Bar Start -->
+<div class="bottom-bar">
+  <div class="container-fluid">
+    <div class="row align-items-center">
+      <div class="col-md-3">
+        <div class="logo">
+          <%= link_to root_path do %>
+            <%= image_tag "logo.png", alt:"Logo" %>
+          <% end %>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="search">
+          <%= text_field_tag "", "", placeholder: "#{ t "static_pages.home.title_search" }" %>
+          <button><i class="fa fa-search"></i></button>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="user">
+          <%= link_to "#", class: "btn wishlist" do %>
+            <i class="fa fa-heart"></i>
+            <span>(0)</span>
+          <% end %>
+          <%= link_to "#", class: "btn cart" do %>
+            <i class="fa fa-shopping-cart"></i>
+            <span>(0)</span>
+          <% end %>
+          <%= link_to "#", class: "btn btn-login" do %>
+            <i class="fas fa-user"></i>
+            <span><%= t "static_pages.home.login" %></span>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Bottom Bar End -->

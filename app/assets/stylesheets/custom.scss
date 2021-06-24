@@ -1,0 +1,50 @@
+@import "root.scss";
+
+.locale {
+  text-decoration: none;
+  &:hover {
+    color: #ffada5;
+  }
+}
+
+.img-banner {
+  width: 100%;
+  height: 88%;
+}
+
+.nav-link-child {
+  display: none;
+  position: absolute;
+  width: 250px;
+  min-height: 38px;
+  list-style: none;
+  border-radius: 1px;
+  background-color: #ffffff;
+  top: 0;
+  z-index: 1;
+  border-radius: 2px;
+  right: -75%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn ease-in 0.2s;
+  a {
+    display: block;
+    padding: 6px 0px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.nav-item-has-child:hover .nav-link-child {
+  display: block;
+}
+
+.btn-login {
+  margin-left: 15px;
+}
