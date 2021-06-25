@@ -24,6 +24,7 @@ vi:
         btn_buy: "Mua ngay"
       title_search: "Tìm kiếm"
       login: "Đăng nhập"
+      btn_buy: "Mua ngay"
     footer:
       get_in_touch: "Liện Hệ"
       address: "Thành phố Hồ Chí Minh"
@@ -50,3 +51,13 @@ vi:
       input_password: "Mật khẩu"
       aside: "Nếu bạn không có tài khoản"
       title_remember_me: "Nhớ thông tin"
+  number:
+    currency:
+      format:
+        delimiter: "."
+        format: "%n %u"
+        precision: 0
+        separator: ","
+        significant: false
+        strip_insignificant_zeros: false
+        unit: "vnđ"

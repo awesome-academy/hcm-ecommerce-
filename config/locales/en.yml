@@ -24,6 +24,7 @@ en:
         btn_buy: "Buy Now"
       title_search: "Search"
       login: "Login"
+      btn_buy: "Buy Now"
   footer:
     get_in_touch: "Get in Touch"
     address: "Ho Chi Minh City"
@@ -51,3 +52,13 @@ en:
       input_password: "Password"
       aside: "If you don't have account?"
       title_remember_me: "Remember me"
+  number:
+    currency:
+      format:
+        delimiter: "."
+        format: "%n %u"
+        precision: 0
+        separator: ","
+        significant: false
+        strip_insignificant_zeros: false
+        unit: "vnđ"
