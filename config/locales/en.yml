@@ -1,4 +1,15 @@
 en:
+  common:
+    menu:
+      profile: "View Profile"
+      order: "Order History"
+      logout: "Log out"
+    flash:
+      login_success: "Login success"
+      login_invalid: "Email or password invalid"
+      login_required: "Email and password is required"
+      success: "success"
+      error: "error"
   static_pages:
     home:
       feature:
@@ -27,3 +38,16 @@ en:
     return_policy: "Return Policy"
     accept: "We Accept:"
     secure: "Secured By:"
+  sessions:
+    new:
+      main_title: "Login"
+      sub_title: "Register"
+      notification: "By registering, you agree to EStore about"
+      privacy: "Privacy Policy"
+      term: "Terms & Condition"
+      btn_back: "Back"
+      btn_login: "Login"
+      input_email: "Email"
+      input_password: "Password"
+      aside: "If you don't have account?"
+      title_remember_me: "Remember me"

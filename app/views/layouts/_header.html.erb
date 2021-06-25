@@ -35,7 +35,7 @@
       </div>
       <div class="col-md-6">
         <div class="search">
-          <%= text_field_tag "", "", placeholder: "#{ t "static_pages.home.title_search" }" %>
+          <%= text_field_tag "", "", placeholder: t("static_pages.home.title_search") %>
           <button><i class="fa fa-search"></i></button>
         </div>
       </div>
@@ -49,9 +49,27 @@
             <i class="fa fa-shopping-cart"></i>
             <span>(0)</span>
           <% end %>
-          <%= link_to "#", class: "btn btn-login" do %>
-            <i class="fas fa-user"></i>
-            <span><%= t "static_pages.home.login" %></span>
+          <% if loggin? %>
+            <div class="btn btn-user">
+              <i class="fas fa-user"></i>
+              <span><%= current_user.fullname %></span>
+              <ul class="user-login">
+                <li> 
+                  <%= link_to t("common.menu.profile"), "#" %>
+                </li>
+                <li>
+                  <%= link_to t("common.menu.order"), "#" %>
+                </li>
+                <li> 
+                  <%= link_to t("common.menu.logout") ,logout_path, method: :delete %> 
+                </li>
+              </ul>
+            </div>
+          <% else %>
+            <%= link_to login_path, class: "btn btn-login" do %>
+              <i class="fas fa-user"></i>
+              <span><%= t "static_pages.home.login" %></span>
+            <% end %>
           <% end %>
         </div>
       </div>

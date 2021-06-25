@@ -13,6 +13,7 @@ import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import "bootstrap"
 require("jquery")
+require("./toast")
 
 Rails.start()
 Turbolinks.start()

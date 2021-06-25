@@ -1,0 +1,8 @@
+<div id="custom-toast"></div>
+<% if flash[:success] %>
+  <div id="content-toast-success" class="d-none"><%= flash[:success] %></div>
+  <div id="title-toast-success" class="d-none"><%= t "common.flash.success" %></div>
+<% elsif flash[:error] %>
+  <div id="content-toast-fail" class="d-none"><%= flash[:error] %></div>
+  <div id="title-toast-fail" class="d-none"><%= t "common.flash.error" %></div>
+<% end %>

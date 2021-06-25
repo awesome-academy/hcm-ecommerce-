@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_22_073321) do
+ActiveRecord::Schema.define(version: 2021_06_24_142605) do
 
   create_table "categories", charset: "utf8mb4", force: :cascade do |t|
     t.string "name"
@@ -74,6 +74,8 @@ ActiveRecord::Schema.define(version: 2021_06_22_073321) do
     t.string "address"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "remember_digest"
+    t.index ["email"], name: "index_users_on_email", unique: true
   end
 
   add_foreign_key "evaluates", "products"
