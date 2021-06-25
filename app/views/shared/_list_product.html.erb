@@ -1,0 +1,33 @@
+<% products.each do |x| %>
+  <div class="col-lg-3">
+    <div class="product-item">
+      <div class="product-title">
+        <%= link_to x.name, "#" %>
+        <div class="ratting">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+      </div>
+      <div class="product-image">
+        <a href="product-detail.html">
+          <%= image_tag "product-2.jpg", alt:"Product Image" %>
+        </a>
+        <div class="product-action">
+          <a href="#"><i class="fa fa-cart-plus"></i></a>
+          <a href="#"><i class="fa fa-heart"></i></a>
+          <a href="#"><i class="fa fa-search"></i></a>
+        </div>
+      </div>
+      <div class="product-price">
+        <h3>  <%=  number_to_currency(x.price) %> </h3>
+        <%= link_to( "#", class: "btn btn-buy") do %>
+          <%= t ".btn_buy" %>
+          <i class="fa fa-shopping-cart"></i>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% end %>
