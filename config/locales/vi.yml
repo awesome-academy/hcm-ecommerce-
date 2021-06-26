@@ -10,6 +10,7 @@ vi:
       login_required: "Email và mật khẩu không được trống"
       success: "Thành công"
       error: "Có lỗi"
+      add_cart_success: "Thêm sản phẩm vào giỏ hàng thành công"
   static_pages:
     home:
       feature:
