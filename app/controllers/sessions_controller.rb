@@ -2,12 +2,12 @@ class SessionsController < ApplicationController
   def new; end
 
   def create
-    session = params[:session]
-    is_validate = validate_login session
-    @user = User.find_by(email: session[:email].downcase)
-    if is_validate && @user&.authenticate?(:password, session[:password])
+    sessions = params[:session]
+    is_validate = validate_login sessions
+    @user = User.find_by(email: sessions[:email].downcase)
+    if is_validate && @user&.authenticate?(:password, sessions[:password])
       login
-      redirect_to root_path
+      redirect_to session[:forwarding_url] || root_path
     else
       flash.now[:error] = message_error is_validate
       render :new

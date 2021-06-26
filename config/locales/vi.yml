@@ -12,6 +12,8 @@ vi:
       error: "Có lỗi"
       add_cart_success: "Thêm sản phẩm vào giỏ hàng thành công"
       quantity_invalid: "Số lượng sản phẩm không hợp lệ"
+      order_success: "Đặt hàng thành công! vui lòng kiểm tra lịch sử đơn hàng của bạn"
+      order_fail: "Đặt hàng thất bại"
   static_pages:
     home:
       feature:
@@ -41,20 +43,34 @@ vi:
         shipping: "Giá vận chuyển"
         grand: "Tổng giá tiền"
         btn_checkout: "Thanh toán"
-    footer:
-      get_in_touch: "Liện Hệ"
-      address: "Thành phố Hồ Chí Minh"
-      follow_us: "Theo dõi chúng tối"
-      company: "Thông tin công ty"
-      about_us: "Về chúng tôi"
-      privacy: "Chính sách bảo mật"
-      term: "Điều khoản và điều kiện"
-      purchase_info: "Thông tin mua hàng"
-      payment_policy: "Chính sách thanh toán"
-      shipping_policy: "Chính sách giao hàng"
-      return_policy: "Chính sách trả hàng"
-      accept: "Chúng tôi chấp nhận:"
-      secure: "Bảo vệ bởi:"
+  orders:
+    new:
+      billing_title: "Địa chỉ thanh toán"
+      fullname: "Họ và tên"
+      email: "E-mail"
+      phone_number: "Số điện thoại"
+      address: "Địa chỉ"
+      cart_total: "Tổng tiền giỏ hàng"
+      sub_total: "Tổng tiền phụ"
+      ship: "Giá vận chuyển"
+      grand: "Tổng giá tiền"
+      payment_method: "Phương thức thanh toán"
+      cash: "Trả tiền mặt"
+      btn_order: "Đặt hàng"
+  footer:
+    get_in_touch: "Liện Hệ"
+    address: "Thành phố Hồ Chí Minh"
+    follow_us: "Theo dõi chúng tối"
+    company: "Thông tin công ty"
+    about_us: "Về chúng tôi"
+    privacy: "Chính sách bảo mật"
+    term: "Điều khoản và điều kiện"
+    purchase_info: "Thông tin mua hàng"
+    payment_policy: "Chính sách thanh toán"
+    shipping_policy: "Chính sách giao hàng"
+    return_policy: "Chính sách trả hàng"
+    accept: "Chúng tôi chấp nhận:"
+    secure: "Bảo vệ bởi:"
   sessions:
     new:
       main_title: "Đăng nhập"

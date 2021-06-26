@@ -71,8 +71,8 @@
                   <p><%= t ".summary.shipping" %><span><%= number_to_currency(0) %></span></p>
                   <h2><%= t ".summary.grand" %><span><%= number_to_currency(@sumary) %></span></h2>
                 </div>
-                <div class="cart-btn text-center">
-                  <button><%= t ".summary.btn_checkout" %></button>
+                <div class="cart-btn text-center mt-24">
+                  <%= link_to t(".summary.btn_checkout"), new_order_path, class: "btn" %>
                 </div>
               </div>
             </div>
