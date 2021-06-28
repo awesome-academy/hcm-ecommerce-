@@ -13,7 +13,7 @@
             0386741177
           </div>
           <div class="col-sm-3">
-            <%= link_to "English", "?locale=en", class: "locale" %> | <%= link_to "Vietnamese", "?locale=vi", class: "locale" %>
+            <%= link_to "English", "?locale=en", class: "locale"%> | <%= link_to "Vietnamese", "?locale=vi", class: "locale"%>
           </div>
         </div>
       </div>
@@ -45,9 +45,9 @@
             <i class="fa fa-heart"></i>
             <span>(0)</span>
           <% end %>
-          <%= link_to "#", class: "btn cart" do %>
+          <%= link_to "#", class: "btn cart", id: "cart" do %>
             <i class="fa fa-shopping-cart"></i>
-            <span>(0)</span>
+            <span id="cart_number" >(<%= current_cart_number %>)</span>
           <% end %>
           <% if loggin? %>
             <div class="btn btn-user">

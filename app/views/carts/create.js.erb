@@ -1,0 +1,47 @@
+
+var current_text = $("#cart_number").text();
+var current_count = +current_text.substring(1,current_text.length - 1) + 1
+$("#cart_number").html("(" + current_count + ")")
+
+var message = $("#message_add_cart").val()
+var type = $("#type_add_car").val()
+
+var main = document.getElementById("custom-toast");
+if (main) {
+  var el = document.getElementById("trigger_show_toast")
+  
+  el.onclick = function() {
+  var toast = document.createElement("div");
+
+  toast.classList.add("custom-toast", `toast--success`);
+  var toastId = setTimeout(() => {
+    main.removeChild(toast);
+  }, 2000 + 1000);
+  toast.onclick = function (e) {
+    if (e.target.closest(".toast__close")) {
+      main.removeChild(toast);
+      clearTimeout(toastId);
+    }
+  };
+  var delay = (2000 / 1000).toFixed(2);
+  toast.style.animation = `slideLeftIn ease 0.3s, fadeOut linear 1s ${delay}s forwards`
+  toast.innerHTML = `
+                <div class="toast__icon">
+                <i class="far fa-check-circle"></i>
+                </div>
+                <div class="toast__body">
+                <h3 class="toast__title">
+                ${message}
+                </h3>
+                <p class="toast__msg">
+                  ${type}
+                </p>
+                </div>
+                <div class="toast__close">
+                <i class="fas fa-times"></i>
+                </div>
+`;
+  main.appendChild(toast);
+  }
+  el.click()
+}

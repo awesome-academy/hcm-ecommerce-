@@ -10,6 +10,7 @@ en:
       login_required: "Email and password is required"
       success: "success"
       error: "error"
+      add_cart_success: "Add product to cart success"
   static_pages:
     home:
       feature:
