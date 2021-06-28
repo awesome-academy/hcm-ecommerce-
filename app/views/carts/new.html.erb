@@ -1,0 +1,85 @@
+<!-- Cart Start -->
+<div class="cart-page">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="cart-page-inner">
+          <div class="table-responsive">
+            <table class="table table-bordered">
+              <thead class="thead-dark">
+                <tr>
+                  <th><%= t ".table.product" %></th>
+                  <th><%= t ".table.price" %></th>
+                  <th><%= t ".table.quantity" %></th>
+                  <th><%= t ".table.total" %></th>
+                  <th><%= t ".table.remove" %></th>
+                </tr>
+              </thead>
+              <tbody class="align-middle">
+                <% @carts.each do |c| %>
+                  <tr>
+                    <td>
+                      <div class="img">
+                        <%= image_tag "product-2.jpg", alt:"Product Image" %>
+                        <p><%= c[:name] %></p>
+                      </div>
+                    </td>
+                    <td><%= number_to_currency(c[:price]) %></td>
+                    <td>
+                    
+                        <div class="qty">
+                          <%= form_for :carts, url: cart_path(c[:id]), method: :patch, html: {class: "form-inline"} do |f| %>
+                            <%= hidden_field_tag :cal, -1 %>
+                            <%= button_tag(class: "btn-minus") do %>
+                              <i class="fa fa-minus"></i>
+                            <% end %>
+                          <% end %>
+                          
+                          <%= text_field_tag "", c[:quatity] %>
+                          <%= form_for :carts, url: cart_path(c[:id]), method: :patch, html: {class: "form-inline"} do |f| %>
+                            <%= hidden_field_tag :cal, 1 %>
+                            <%= button_tag(class: "btn-plus") do %>
+                              <i class="fa fa-plus"></i>
+                            <% end %>
+                          <% end %>
+                        </div>
+               
+                    </td>
+                    <td><%= number_to_currency(c[:total]) %></td>
+                    <td>
+                      <%= link_to cart_path(c[:id]), method: :delete do %>
+                        <button><i class="fa fa-trash"></i></button>
+                      <% end %>
+                     
+                    </td>
+                  </tr>
+                <% end %>
+            
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="cart-page-inner">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="cart-summary">
+                <div class="cart-content">
+                  <h1><%= t ".summary.title" %></h1>
+                  <p><%= t ".summary.sub_total" %><span> <%= number_to_currency(@sumary) %> </span></p>
+                  <p><%= t ".summary.shipping" %><span><%= number_to_currency(0) %></span></p>
+                  <h2><%= t ".summary.grand" %><span><%= number_to_currency(@sumary) %></span></h2>
+                </div>
+                <div class="cart-btn text-center">
+                  <button><%= t ".summary.btn_checkout" %></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Cart End -->

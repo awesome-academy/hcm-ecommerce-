@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root "static_pages#home"
   
-  resources :carts, only: [:create]
+  resources :carts, only: [:create, :new, :update, :destroy]
   
   get "/login", to: "sessions#new"
   post "/login", to: "sessions#create"
