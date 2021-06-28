@@ -11,6 +11,7 @@ vi:
       success: "Thành công"
       error: "Có lỗi"
       add_cart_success: "Thêm sản phẩm vào giỏ hàng thành công"
+      quantity_invalid: "Số lượng sản phẩm không hợp lệ"
   static_pages:
     home:
       feature:
@@ -26,6 +27,20 @@ vi:
       title_search: "Tìm kiếm"
       login: "Đăng nhập"
       btn_buy: "Mua ngay"
+  carts:
+    new:
+      table:
+        product: "Sản phẩm"
+        price: "Giá"
+        quantity: "Số lượng"
+        total: "Tổng tiền"
+        remove: "Xóa"
+      summary:
+        title: "Chi tiết giỏ hàng"
+        sub_total: "Tổng phụ"
+        shipping: "Giá vận chuyển"
+        grand: "Tổng giá tiền"
+        btn_checkout: "Thanh toán"
     footer:
       get_in_touch: "Liện Hệ"
       address: "Thành phố Hồ Chí Minh"

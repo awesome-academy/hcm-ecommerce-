@@ -11,6 +11,7 @@ en:
       success: "success"
       error: "error"
       add_cart_success: "Add product to cart success"
+      quantity_invalid: "Quantity of product invalid"
   static_pages:
     home:
       feature:
@@ -26,6 +27,20 @@ en:
       title_search: "Search"
       login: "Login"
       btn_buy: "Buy Now"
+  carts:
+    new:
+      table:
+        product: "Product"
+        price: "Price"
+        quantity: "Quantity"
+        total: "Total"
+        remove: "Remove"
+      summary:
+        title: "Cart Summary"
+        sub_total: "Sub Total"
+        shipping: "Shipping Cost"
+        grand: "Grand Total"
+        btn_checkout: "Checkout"
   footer:
     get_in_touch: "Get in Touch"
     address: "Ho Chi Minh City"

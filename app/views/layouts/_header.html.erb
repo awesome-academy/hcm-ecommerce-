@@ -45,7 +45,7 @@
             <i class="fa fa-heart"></i>
             <span>(0)</span>
           <% end %>
-          <%= link_to "#", class: "btn cart", id: "cart" do %>
+          <%= link_to new_cart_path, class: "btn cart", id: "cart" do %>
             <i class="fa fa-shopping-cart"></i>
             <span id="cart_number" >(<%= current_cart_number %>)</span>
           <% end %>
