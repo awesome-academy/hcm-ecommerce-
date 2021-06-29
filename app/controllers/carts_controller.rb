@@ -1,4 +1,5 @@
 class CartsController < ApplicationController
+  before_action :check_admin?
   before_action :current_cart
 
   def create

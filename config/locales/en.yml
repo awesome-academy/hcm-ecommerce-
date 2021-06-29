@@ -4,6 +4,10 @@ en:
       profile: "View Profile"
       order: "Order History"
       logout: "Log out"
+      dashboard: "Dashboard"
+      order: "Orders"
+      product: "Products"
+      customer: "Customers"
     flash:
       login_success: "Login success"
       login_invalid: "Email or password invalid"

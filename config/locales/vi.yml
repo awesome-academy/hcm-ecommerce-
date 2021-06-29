@@ -4,6 +4,10 @@ vi:
       profile: "Xem thông tin tài khoản"
       order: "Lịch sử đơn hàng"
       logout: "Đăng xuất"
+      dashboard: "Bảng điều khiển"
+      order: "Đơn hàng"
+      product: "Sản phẩm"
+      customer: "Khách hàng"
     flash:
       login_success: "Đăng nhập thành công"
       login_invalid: "Email hoặc mật khẩu không đúng"

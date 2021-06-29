@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  before_action :check_admin?
+
   def new; end
 
   def create
@@ -7,7 +9,7 @@ class SessionsController < ApplicationController
     @user = User.find_by(email: sessions[:email].downcase)
     if is_validate && @user&.authenticate?(:password, sessions[:password])
       login
-      redirect_to session[:forwarding_url] || root_path
+      redirect_to admin_root_path && return if is_admin?
     else
       flash.now[:error] = message_error is_validate
       render :new
@@ -24,6 +26,8 @@ class SessionsController < ApplicationController
     loggin_user(@user)
     session[:remember] == "1" ? remember_user(@user) : forgot_user(@user)
     flash[:success] = t "common.flash.login_success"
+    redirect_to session[:forwarding_url] || root_path
+    session[:forwarding_url] = ""
   end
 
   def message_error value

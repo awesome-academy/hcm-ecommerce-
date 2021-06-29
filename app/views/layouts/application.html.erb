@@ -15,8 +15,15 @@
 
   <body>
     <%= render "layouts/toast" %>
-    <%= render "layouts/header" %>
+    <%= render "layouts/header" unless is_admin? %>
+    <%= render "layouts/admin_side_bar" if is_admin? %>
     <%= yield %>
-    <%= render "layouts/footer" %>
+    
+    <% if is_admin? %>
+        </div>
+      </div>
+    <% end %>
+    
+    <%= render "layouts/footer" unless is_admin? %>
   </body>
 </html>

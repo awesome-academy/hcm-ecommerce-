@@ -1,5 +1,6 @@
 class OrdersController < ApplicationController
   before_action :is_loggin?
+  before_action :check_admin?
 
   def new
     redirect_to login_path unless loggin?

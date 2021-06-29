@@ -17,6 +17,14 @@ module SessionsHelper
     end
   end
 
+  def is_admin?
+    current_user&.admin?
+  end
+
+  def check_admin?
+    redirect_to admin_root_path if current_user&.admin?
+  end
+
   def loggin?
     current_user.present?
   end
