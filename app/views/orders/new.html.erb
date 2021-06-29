@@ -1,0 +1,69 @@
+<!-- Checkout Start -->
+<div class="checkout">
+  <div class="container-fluid">
+   <%= form_for :order, url: orders_path do |f| %>
+    <div class="row">
+        <div class="col-lg-8">
+          <div class="checkout-inner">
+            <div class="billing-address">
+              <h2><%= t ".billing_title" %></h2>
+              <div class="row">
+                <div class="col-md-12">
+                  <label><%= t ".fullname" %></label>
+                  <%= f.text_field :fullname, class:"form-control", placeholder: t(".fullname"), value: current_user.fullname %>
+                </div>
+                <div class="col-md-6">
+                  <label><%= t ".email" %></label>
+                  <%= f.email_field :email, class:"form-control", placeholder: t(".email"), value: current_user.email %>
+                </div>
+                <div class="col-md-6">
+                  <label><%= t ".phone_number" %></label>
+                  <%= f.phone_field :phone_number, class:"form-control", placeholder: t(".phone_number"), value: current_user.phone_number %>
+                </div>
+                <div class="col-md-12">
+                  <label><%= t ".address" %></label>
+                  <%= f.text_field :address, class:"form-control", placeholder: t(".address"), value: current_user.address %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="checkout-inner">
+            <div class="checkout-summary">
+              <h1><%= t ".cart_total" %></h1>
+              <% @carts.each do |c| %>
+               <p><%= c[:name] %><span><%= number_to_currency(c[:price]) %></span></p>
+              <% end %>
+              <p class="sub-total"><%= t ".cart_total" %><span><%= number_to_currency(@sumary) %></span></p>
+              <p class="ship-cost"><%= t ".ship" %><span><%= number_to_currency(0) %></span></p>
+              <h2><%= t ".grand" %><span><%= number_to_currency(@sumary) %></span></h2>
+            </div>
+
+            <div class="checkout-payment">
+              <div class="payment-methods">
+                <h1><%= t ".payment_method" %></h1>
+                <div class="payment-method">
+                  <div class="custom-control custom-radio">
+                    <%= f.radio_button :payment, "Stripe", class:"custom-control-input" %>
+                    <%= f.label :payment_stripe, "Stripe", class:"custom-control-label" %>
+                  </div>
+                </div>
+                <div class="payment-method">
+                  <div class="custom-control custom-radio">
+                    <%= f.radio_button :payment, t(".cash"), class:"custom-control-input" %>
+                    <%= f.label :payment_cash_on_delivery, t(".cash"), class:"custom-control-label" %>
+                  </div>
+                </div>
+              </div>
+              <div class="checkout-btn">
+                <%= f.submit t(".btn_order"), class: "btn btn-checkout" %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+<!-- Checkout End -->

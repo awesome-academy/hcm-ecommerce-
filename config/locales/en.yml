@@ -12,6 +12,8 @@ en:
       error: "error"
       add_cart_success: "Add product to cart success"
       quantity_invalid: "Quantity of product invalid"
+      order_success: "Order product success! Please check your order history"
+      order_fail: "Order product fail"
   static_pages:
     home:
       feature:
@@ -41,6 +43,20 @@ en:
         shipping: "Shipping Cost"
         grand: "Grand Total"
         btn_checkout: "Checkout"
+  orders:
+    new:
+      billing_title: "Billing Address"
+      fullname: "Full Name"
+      email: "E-mail"
+      phone_number: "Phone Number"
+      address: "Address"
+      cart_total: "Cart Total"
+      sub_total: "Sub Total"
+      ship: "Shipping Cost"
+      grand: "Grand Total"
+      payment_method: "Payment Methods"
+      cash: "Cash on Delivery"
+      btn_order: "Place Order"
   footer:
     get_in_touch: "Get in Touch"
     address: "Ho Chi Minh City"

@@ -22,26 +22,9 @@ class CartsController < ApplicationController
   end
 
   def new
-    @carts = []
-    @sumary = 0
-    @current_cart.each do |k, v|
-      product = Product.find_by(id: k)
-      unless product
-        @current_cart.delete(params[:id])
-        next
-      end
-
-      total = v * product[:price]
-      @sumary += total
-      cart = {
-        name: product[:name],
-        quatity: v,
-        price: product[:price],
-        total: total,
-        id: product[:id]
-      }
-      @carts << cart
-    end
+    @carts = summary_cart
+    @sumary = @carts[-1]
+    @carts.pop
   end
 
   def destroy

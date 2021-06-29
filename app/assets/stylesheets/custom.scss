@@ -347,3 +347,16 @@
 .form-inline {
   display: inline-block !important;
 }
+
+.mt-24 {
+  margin-top: 24px;
+} 
+
+.btn-checkout {
+  width: 100%;
+  background-color: #ff6f61;
+  color: #fff
+}
+.btn-checkout:hover {
+  background-color: #e88076;
+}
