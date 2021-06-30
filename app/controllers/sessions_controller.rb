@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  before_action :check_admin?
+  before_action :check_admin?, except: [:destroy]
 
   def new; end
 

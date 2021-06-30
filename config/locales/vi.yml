@@ -18,6 +18,36 @@ vi:
       quantity_invalid: "Số lượng sản phẩm không hợp lệ"
       order_success: "Đặt hàng thành công! vui lòng kiểm tra lịch sử đơn hàng của bạn"
       order_fail: "Đặt hàng thất bại"
+      approve: "Chấp thuận đơn hàng thành công"
+      reject: "Từ chối đơn hàng thành công"
+      load_order_fail: "Lấy đơn hàng thất bại"
+      update_order_fail: "Cập nhật đơn hàng thất bại"
+  admin:
+    orders:
+      edit:
+        title_card_address: "Địa chỉ người nhận"
+        title_address: "Địa chỉ: "
+        title_phone: "Phone number: "
+        title_delivery: "Phương thức vận chuyển"
+        title_ship: "Giá vận chuyển: "
+        title_payment_method: "Phương thức thanh toán"
+        title_product: "Sản phẩm"
+        title_price: "Giá"
+        title_quantity: "Số lượng"
+        title_total: "Tổng tiền"
+        sub_total: "Tổng tạm tính: "
+        ship: "Giá vận chuyển: "
+        total: "Tổng tiền: "
+        btn_approve: "Chấp thuận"
+        btn_reject: "Từ chối"
+      index:
+        title_time: "Thời gian đặt hàng"
+        title_quantity: "Số lượng"
+        title_total: "Tổng tiền"
+        title_status: "Trạng thái"
+        title_action: "Hành động"
+        title_name: "Người mua"
+        title_phone: "Số điện thoại"
   static_pages:
     home:
       feature:

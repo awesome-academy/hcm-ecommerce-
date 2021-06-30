@@ -21,35 +21,35 @@
   </ul>
 </nav>
 
-<div class="container-fluid">
-  <div class="row">
-    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
-      <div class="sidebar-sticky pt-3">
-        <ul class="nav flex-column">
-          <li class="nav-item">
-            <a class="nav-link active" href="#">
-              <i class="fas fa-home icon-dash"></i>
-              <%= t "common.menu.dashboard" %>
-            </a>
-          </li>
-          <li class="nav-item">
-            <%= link_to admin_orders_path , class: "nav-link" do %>
-              <i class="far fa-file icon-dash"></i>
-              <%= t "common.menu.order" %>
-            <% end %>
+  <div class="container-fluid">
+    <div class="row">
+      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+        <div class="sidebar-sticky pt-3">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <%= link_to admin_root_path , class: "nav-link active" do %>
+                <i class="fas fa-home icon-dash"></i>
+                <%= t "common.menu.dashboard" %>
+              <% end %>
             </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="fas fa-shopping-cart icon-dash"></i>
-              <%= t "common.menu.product" %>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="fas fa-user icon-dash"></i>
-              <%= t "common.menu.customer" %>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+            <li class="nav-item">
+              <%= link_to admin_orders_path , class: "nav-link" do %>
+                <i class="far fa-file icon-dash"></i>
+                <%= t "common.menu.order" %>
+              <% end %>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="fas fa-shopping-cart icon-dash"></i>
+                <%= t "common.menu.product" %>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="fas fa-user icon-dash"></i>
+                <%= t "common.menu.customer" %>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
