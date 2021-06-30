@@ -1,0 +1,55 @@
+<style>
+@media (min-width: 768px){
+  .nav, .nav .navbar {
+    background-color: #f8f9fa !important;
+  }
+}
+</style>
+
+<nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+  <%= link_to "#", class: "navbar-brand col-md-3 col-lg-2 mr-0 px-3 px-2" do %>
+    <%= image_tag "logo-white.png", alt:"Logo", id: "logo-admin" %>
+  <% end %>
+  <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <input class="form-control m-0 form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+  <ul class="navbar-nav px-3">
+    <li class="nav-item text-nowrap">
+      <%= link_to t("common.menu.logout"), logout_path, class: "nav-link", method: :delete %>
+    </li>
+  </ul>
+</nav>
+
+<div class="container-fluid">
+  <div class="row">
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+      <div class="sidebar-sticky pt-3">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">
+              <i class="fas fa-home icon-dash"></i>
+              <%= t "common.menu.dashboard" %>
+            </a>
+          </li>
+          <li class="nav-item">
+            <%= link_to admin_orders_path , class: "nav-link" do %>
+              <i class="far fa-file icon-dash"></i>
+              <%= t "common.menu.order" %>
+            <% end %>
+            </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fas fa-shopping-cart icon-dash"></i>
+              <%= t "common.menu.product" %>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fas fa-user icon-dash"></i>
+              <%= t "common.menu.customer" %>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
