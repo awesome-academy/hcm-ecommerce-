@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :orders, only: [:new, :create]
   
   namespace :admin do
-    resources :orders
+    resources :orders, only: [:index, :edit, :update]
     resources :products
     
     root "static_pages#dashboard"

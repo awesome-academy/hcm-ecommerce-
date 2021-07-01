@@ -23,7 +23,7 @@
             <td><%= number_to_currency(i[:price]) %></td>
             <td><%= i.category[:name] %></td>
             <td>
-              <%= link_to t(".btn_update"), "#", class: "btn btn-update" %>
+              <%= link_to t(".btn_update"), edit_admin_product_path(i[:id]), class: "btn btn-update" %>
               <%= link_to t(".btn_delete"), "#", class: "btn btn-delete" %>
             </td>
           </tr>
