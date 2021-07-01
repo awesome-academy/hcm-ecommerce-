@@ -276,3 +276,38 @@ body {
 .img-product {
   width: 32px;
 }
+
+#product_category_id {
+  flex: 1;
+  min-height: 34px;
+}
+
+.title-form {
+  min-width: 88px  
+}
+
+#error_explanation {
+  width: 100%;
+  color: red;
+  ul {
+    background-color: #fff;
+    color: red;
+    padding: 12px 36px;
+    margin: 0 0 30px 0;
+    border: 1px solid;
+  }
+}
+.field_with_errors {
+
+  .form-control {
+    color: #c21728;
+  }
+}
+
+.field_with_errors:nth-child(2) {
+  width: 100%;
+ .form-control {
+  border-color: #ff6f61 !important;
+  color: #c21728;
+ }
+}

@@ -1,5 +1,11 @@
 vi:
   common:
+    btn_submit: "Xác nhận"
+    error_message:
+      count_error: "Biểu mẫu chứa "
+      error: "lỗi"
+      type_image: "Phải là một định dạng hình ảnh hợp lệ"
+      length_image: "Phải nhỏ hơn 5MB"
     menu:
       profile: "Xem thông tin tài khoản"
       order: "Lịch sử đơn hàng"
@@ -22,6 +28,8 @@ vi:
       reject: "Từ chối đơn hàng thành công"
       load_order_fail: "Lấy đơn hàng thất bại"
       update_order_fail: "Cập nhật đơn hàng thất bại"
+      create_product_success: "Tạo sản phẩm thành công"
+      load_category_fail: "Lấy danh mục của sản phẩm thất bại"
   admin:
     orders:
       edit:
@@ -49,6 +57,19 @@ vi:
         title_name: "Người mua"
         title_phone: "Số điện thoại"
         btn_view_detail: "Xem chi tiết"
+    products:
+      index:
+        title_name: "Tên sản phẩm"
+        title_img: "Hình ảnh"
+        title_quatity: "Số lượng"
+        title_price: "Giá"
+        title_category: "Danh mục"
+        title_action: "Hành động"
+        btn_create: "Tạo mới"
+        btn_update: "Sửa"
+        btn_delete: "Xóa"
+      new:
+        btn_sunmit: "Xác nhận"
   static_pages:
     home:
       feature:

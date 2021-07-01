@@ -1,5 +1,11 @@
 en:
   common:
+    btn_submit: "Submit"
+    error_message:
+      count_error: "The form contains "
+      error: "error"
+      type_image: "must be a valid image format"
+      length_image: "should be less than 5MB"
     menu:
       profile: "View Profile"
       order: "Order History"
@@ -22,6 +28,8 @@ en:
       reject: "Reject order success"
       load_order_fail: "Load order fail"
       update_order_fail: "Update order fail"
+      create_product_success: "Create product success"
+      load_category_fail: "Load category fail"
   admin:
     orders:
       edit:
@@ -60,6 +68,8 @@ en:
         btn_create: "Create"
         btn_update: "Update"
         btn_delete: "Delete"
+      new:
+        btn_sunmit: "Submit"
   static_pages:
     home:
       feature:
@@ -140,3 +150,4 @@ en:
         significant: false
         strip_insignificant_zeros: false
         unit: "vnđ"
+        
