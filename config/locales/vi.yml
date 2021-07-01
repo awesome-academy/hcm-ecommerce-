@@ -48,6 +48,7 @@ vi:
         title_action: "Hành động"
         title_name: "Người mua"
         title_phone: "Số điện thoại"
+        btn_view_detail: "Xem chi tiết"
   static_pages:
     home:
       feature:

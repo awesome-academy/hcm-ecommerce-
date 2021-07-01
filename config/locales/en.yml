@@ -48,6 +48,18 @@ en:
         title_action: "Action"
         title_name: "Buyer"
         title_phone: "Phone number"
+        btn_view_detail: "View detail"
+    products:
+      index:
+        title_name: "Product name"
+        title_img: "Image"
+        title_quatity: "Quantity"
+        title_price: "Price"
+        title_category: "Category"
+        title_action: "Action"
+        btn_create: "Create"
+        btn_update: "Update"
+        btn_delete: "Delete"
   static_pages:
     home:
       feature:
