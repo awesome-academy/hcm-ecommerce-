@@ -32,6 +32,9 @@ en:
       load_category_fail: "Load category fail"
       update_product_success: "Update product success"
       load_product_fail: "Load product fail"
+      delete_product_success: "Delete product success"
+      delete_product_fail: "Delete product fail"
+      confirm_delete: "Are you sure?"
   admin:
     orders:
       edit:

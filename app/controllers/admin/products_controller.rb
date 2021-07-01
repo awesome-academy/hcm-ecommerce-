@@ -1,10 +1,11 @@
 class Admin::ProductsController < AdminController
   before_action :load_category, only: [:create]
-  before_action :load_product, only: [:edit, :update]
+  before_action :load_product, only: [:edit, :update, :destroy]
   before_action :load_childrens, only: [:new, :create, :edit, :update]
 
   def index
-    @products = Product.page(params[:page]).per(Settings.per_page).sort_update
+    @products = Product.page(params[:page]).per(Settings.per_page)
+                       .active.sort_update
   end
 
   def new
@@ -33,6 +34,15 @@ class Admin::ProductsController < AdminController
     else
       render :edit
     end
+  end
+
+  def destroy
+    if @product.update(deleted: true)
+      flash[:success] = t "common.flash.delete_product_success"
+    else
+      flash[:error] = t "common.flash.delete_product_fail"
+    end
+    redirect_to admin_products_path
   end
 
   private

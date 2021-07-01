@@ -32,6 +32,9 @@ vi:
       load_category_fail: "Lấy danh mục của sản phẩm thất bại"
       update_product_success: "Cập nhật sản phẩm thành công"
       load_product_fail: "Lấy sản phẩm thất bại"
+      delete_product_success: "Xóa sản phẩm thành công"
+      delete_product_fail: "Xóa sản phẩm thất bại"
+      confirm_delete: "Bạn có chắc không ?"
   admin:
     orders:
       edit:
