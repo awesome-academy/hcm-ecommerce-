@@ -2,7 +2,7 @@
   <div class="col-lg-3">
     <div class="product-item">
       <div class="product-title">
-        <%= link_to x.name, "#" %>
+        <%= link_to x.name, edit_product_path(x[:id]) %>
         <div class="ratting">
           <i class="fa fa-star"></i>
           <i class="fa fa-star"></i>
@@ -13,7 +13,7 @@
       </div>
       <div class="product-image">
         <a href="product-detail.html">
-          <%= image_tag "product-2.jpg", alt:"Product Image" %>
+          <%= image_tag x.image, alt:"Product Image" if x.image.attached? %>
         </a>
         <div class="product-action">
           <a href="#"><i class="fa fa-cart-plus"></i></a>

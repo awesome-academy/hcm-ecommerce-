@@ -360,3 +360,34 @@
 .btn-checkout:hover {
   background-color: #e88076;
 }
+
+.image-product{
+  width: 100%;
+  border: 1px solid;
+  border-radius: 6px;
+  padding: 16px 0;
+  margin-left: 16px;
+}
+
+.product-content {
+  padding-left: 50px !important;
+}
+
+#description {
+  h4 {
+    font-weight: bolder;
+    font-size: 26px;
+  }
+  p {
+    font-size: 16px
+  }  
+}
+
+#count {
+  height: 36px;
+}
+
+.qty-flex {
+  display: inline-flex !important;
+  align-items: center;  
+}

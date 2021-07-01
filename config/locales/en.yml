@@ -101,6 +101,13 @@ en:
       title_search: "Search"
       login: "Login"
       btn_buy: "Buy Now"
+  products:
+    edit:
+      title_price: "Price: "
+      title_quantity: "Quantity: "
+      btn_add_to_cart: "Add to Cart"
+      btn_buy_now: "Buy Now"
+      description: "Product description"
   carts:
     new:
       table:

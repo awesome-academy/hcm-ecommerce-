@@ -1,6 +1,13 @@
 
 var current_text = $("#cart_number").text();
-var current_count = +current_text.substring(1,current_text.length - 1) + 1
+var counter = +$("#count").val()
+var current_count= 0
+
+if(counter){
+  current_count = +current_text.substring(1,current_text.length - 1) + counter
+}else {
+  current_count = +current_text.substring(1,current_text.length - 1) + 1
+}
 $("#cart_number").html("(" + current_count + ")")
 
 var message = $("#message_add_cart").val()

@@ -86,6 +86,13 @@ vi:
         btn_delete: "Xóa"
       new:
         btn_sunmit: "Xác nhận"
+  products:
+    edit:
+      title_price: "Giá: "
+      title_quantity: "Số lượng: "
+      btn_add_to_cart: "Thêm vào giỏ hàng"
+      btn_buy_now: "Mua ngay"
+      description: "Mô tả sản phẩm"
   static_pages:
     home:
       feature:

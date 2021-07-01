@@ -20,7 +20,8 @@ module CartsHelper
         quatity: v,
         price: product[:price],
         total: total,
-        id: product[:id]
+        id: product[:id],
+        image: product.image
       }
       carts << cart
     end
