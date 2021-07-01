@@ -62,6 +62,15 @@ en:
         title_name: "Buyer"
         title_phone: "Phone number"
         btn_view_detail: "View detail"
+    dashboard:
+      title: "Dashboard"
+      btn_share: "Share"
+      btn_export: "Export"
+      this_week: "This week"
+      customer: "Customers"
+      product: "Products"
+      order: "Orders"
+      total: "Total"
     products:
       index:
         title_name: "Product name"

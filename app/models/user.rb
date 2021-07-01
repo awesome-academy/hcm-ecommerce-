@@ -6,6 +6,8 @@ class User < ApplicationRecord
 
   enum role: {user: 0, admin: 1}
 
+  scope :customers, ->{where("id IN (select DISTINCT user_id from orders)")}
+
   has_secure_password
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i.freeze
