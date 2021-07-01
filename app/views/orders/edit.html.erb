@@ -1,0 +1,86 @@
+<div class="wrapper-order container" >
+  <div class="header">
+    <div class="info-user">
+      <p class="title" style="text-transform: uppercase;"><%= t ".title_card_address" %></p>
+      <div class="card">
+        <h3><%= @order[:fullname] %></h3>
+        <p class="address"><%= t ".title_address" %><%= @order[:address] %></p>
+        <p class="phone"><%= t ".title_phone" %><%= @order[:phone_number] %></p>
+      </div>
+    </div>
+    <div class="delivery">
+      <p class="title" style="text-transform: uppercase;"><%= t ".title_delivery" %></p>
+      <div class="card">
+        <%= t ".title_ship" %> <%= number_to_currency(0) %>
+      </div>
+    </div>
+    <div class="payment">
+      <p class="title" style="text-transform: uppercase;"><%= t ".title_payment_method" %></p>
+      <div class="card">
+        Cash on Delivery
+      </div>
+    </div>
+  </div>
+  <div class="wishlist-page">
+    <div class="wishlist-page-inner">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="table-responsive">
+            <table class="table table-bordered">
+              <thead class="thead-dark">
+                <tr>
+                  <th><%= t ".title_product" %></th>
+                  <th><%= t ".title_price" %></th>
+                  <th><%= t ".title_quantity" %></th>
+                  <th><%= t ".title_total" %></th>
+                </tr>
+              </thead>
+              <tbody class="align-middle">
+                <% @order.order_details.each do |item| %>
+                  <tr>
+                    <td>
+                      <div class="img">
+                        <%= image_tag "product-6.jpg" %>
+                        <p><%= item.product[:name] %></p>
+                      </div>
+                    </td>
+                    <td><%= number_to_currency(item[:price]) %></td>
+                    <td>
+                      <%= item[:quatity] %>
+                    </td>
+                    <td><%= number_to_currency(item[:quatity] * item[:price] ) %></td>
+                  </tr>
+                <% end %>
+                
+                <tr>
+                  <td style="border-right: none"></td>
+                  <td style="border-right: none; border-left: none"></td>
+                  <td style="border-right: none; text-align: end; border-left: none">
+                    <div><strong><%= t ".sub_total" %></strong></div>
+                    <div><strong><%= t ".ship" %></strong></div>
+                    <div><strong><%= t ".total" %></strong></div>
+                  </td>
+                  <td style="border-left:none; text-align: end">
+                    <div><%= number_to_currency(@total) %></div>
+                    <div><%= number_to_currency(0) %></div>
+                    <div><%= number_to_currency(@total) %></div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="action-order">
+    <% if @order.pending? %>
+      <%= form_for :order, url: order_path, method: :patch, html: {class: "form-inline"} do |f| %>
+        <%= hidden_field_tag :status, 2 %>
+        <%= button_tag(class: "btn btn-reject", data: { confirm: t("common.flash.confirm_delete") }) do %>
+          <%= t ".btn_cancel" %>
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>
+</div>

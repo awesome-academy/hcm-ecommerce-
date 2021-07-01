@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root "static_pages#home"
   
   resources :carts, only: [:create, :new, :update, :destroy]
-  resources :orders, only: [:new, :create]
+  resources :orders, only: [:new, :create, :index, :edit, :update]
   
   namespace :admin do
     resources :orders, only: [:index, :edit, :update]

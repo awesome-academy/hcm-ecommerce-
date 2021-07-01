@@ -6,18 +6,28 @@ class Order < ApplicationRecord
 
   scope :sort_desc, ->{order(created_at: :desc)}
   scope :approved, ->{where(status: 1)}
+  scope :orders, ->(user_id){where(user_id: user_id)}
 
   enum status: {pending: 0, approved: 1, cancel: 2, rejected: 3}
 
   def reject_order
     rejected!
-    order_details.each do |d|
-      d.product.update!(quatity: d.product[:quatity] + d[:quatity])
-    end
+    refund_quatity
   end
 
   def approve_order
     approved!
+  end
+
+  def cancel_order
+    cancel!
+    refund_quatity
+  end
+
+  def refund_quatity
+    order_details.each do |d|
+      d.product.update!(quatity: d.product[:quatity] + d[:quatity])
+    end
   end
 
   private

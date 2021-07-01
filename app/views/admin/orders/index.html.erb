@@ -23,7 +23,7 @@
             <td><%= i[:order_quatity] %></td>
             <td><%= number_to_currency(i[:price]) %></td>
             <td>
-              <%= label_tag i[:status], i[:status], class:"badge badge-#{i[:status] == 'rejected' ? 'danger' : i[:status] == 'pending' ? 'primary' : 'success'}" %>
+              <%= label_tag i[:status], i[:status], class:"badge badge-#{i[:status] == 'rejected' || i[:status] == 'cancel' ? 'danger' : i[:status] == 'pending' ? 'primary' : 'success'}" %>
             </td>
             <td><%= link_to t(".btn_view_detail"), edit_admin_order_path(i[:order_id]), class: "btn btn-detail" %></td>
           </tr>
