@@ -250,3 +250,29 @@ body {
     }
   }
 }
+
+.btn-create {
+  margin: 16px 0;
+  background-color: rgb(33, 167, 33);
+  border-color: rgb(33, 167, 33);
+  color: #fff;
+  &:hover {
+    background-color: rgb(10, 143, 10);
+  }
+}
+.btn-delete {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  color: #fff;
+  padding: 0.075rem 0.75rem !important;
+  &:hover {
+    background-color: #c21728;
+  }
+}
+.btn-update {
+  padding: 0.075rem 0.75rem !important;
+}
+
+.img-product {
+  width: 32px;
+}
