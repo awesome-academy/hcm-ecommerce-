@@ -18,6 +18,36 @@ en:
       quantity_invalid: "Quantity of product invalid"
       order_success: "Order product success! Please check your order history"
       order_fail: "Order product fail"
+      approve: "Approve order success"
+      reject: "Reject order success"
+      load_order_fail: "Load order fail"
+      update_order_fail: "Update order fail"
+  admin:
+    orders:
+      edit:
+        title_card_address: "Receiver's address"
+        title_address: "Address: "
+        title_phone: "Phone number: "
+        title_delivery: "Mode of delivery"
+        title_ship: "Shipping cost: "
+        title_payment_method: "Payment method"
+        title_product: "Product"
+        title_price: "Price"
+        title_quantity: "Quantity"
+        title_total: "Total"
+        sub_total: "Sub Total: "
+        ship: "Shipping Cost: "
+        total: "Grand Total: "
+        btn_approve: "Approve"
+        btn_reject: "Reject"
+      index:
+        title_time: "Order time"
+        title_quantity: "Quantity"
+        title_total: "Total"
+        title_status: "Status"
+        title_action: "Action"
+        title_name: "Buyer"
+        title_phone: "Phone number"
   static_pages:
     home:
       feature:

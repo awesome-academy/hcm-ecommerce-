@@ -146,19 +146,3 @@ Product.create!(
   category_id: 8,
   price: 8_490_000,
 )
-
-Order.create!(
-  id: 1,
-  user_id: 1,
-  status: 1,
-  address: "test",
-  name: "nhut",
-  phone_number: "213213"
-)
-
-OrderDetail.create!(
-  order_id: 1,
-  product_id: 1,
-  quatity: 5,
-  price: 10000
-)

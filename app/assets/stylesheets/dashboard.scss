@@ -1,5 +1,6 @@
+@import "root.scss";
 body {
-  font-size: .875rem;
+  font-size: 0.875rem;
 }
 
 .feather {
@@ -19,12 +20,12 @@ body {
   left: 0;
   z-index: 100; /* Behind the navbar */
   padding: 48px 0 0; /* Height of navbar */
-  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1);
 }
 
 .icon-dash {
   min-width: 25px;
-} 
+}
 
 @media (max-width: 767.98px) {
   .sidebar {
@@ -36,7 +37,7 @@ body {
   position: relative;
   top: 0;
   height: calc(100vh - 48px);
-  padding-top: .5rem;
+  padding-top: 0.5rem;
   overflow-x: hidden;
   overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
 }
@@ -45,6 +46,9 @@ body {
   height: 32px;
 }
 
+#table-item {
+  cursor: pointer;
+}
 @supports ((position: -webkit-sticky) or (position: sticky)) {
   .sidebar-sticky {
     position: -webkit-sticky;
@@ -72,7 +76,7 @@ body {
 }
 
 .sidebar-heading {
-  font-size: .75rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
 }
 
@@ -81,31 +85,168 @@ body {
  */
 
 .navbar-brand {
-  padding-top: .75rem;
-  padding-bottom: .75rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
   font-size: 1rem;
-  background-color: rgba(0, 0, 0, .25);
-  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
+  background-color: rgba(0, 0, 0, 0.25);
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.25);
 }
 
 .navbar .navbar-toggler {
-  top: .25rem;
+  top: 0.25rem;
   right: 1rem;
 }
 
 .navbar .form-control {
-  padding: .75rem 1rem;
+  padding: 0.75rem 1rem;
   border-width: 0;
   border-radius: 0;
 }
 
 .form-control-dark {
   color: #fff;
-  background-color: rgba(255, 255, 255, .1);
-  border-color: rgba(255, 255, 255, .1);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.1);
 }
 
 .form-control-dark:focus {
   border-color: transparent;
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25);
+}
+
+.pagination {
+  justify-content: center;
+  margin-bottom: 0;
+  margin-top: 16px;
+  span {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    color: $primary_color;
+    background: #ffffff;
+    border: 1px solid $primary_color;
+    padding: 0 !important;
+    a {
+      display: block;
+      padding: 0.375rem 0.75rem;
+    }
+  }
+  
+  .current {
+    padding: 0.375rem 0.75rem !important;
+  }
+
+  span:hover,
+  span:active,
+  span:focus,
+  .current {
+    color: #fff;
+    background: $primary_color;
+    box-shadow: none;
+    cursor: pointer;
+    a {
+      color: #fff;
+    }
+  }
+  span + span {
+    margin-left: 8px;
+  }
+}
+
+.btn-detail {
+  padding: 0.075rem 0.75rem !important;
+}
+
+.wrapper-order {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    .info-user,
+    .delivery,
+    .payment {
+      width: 32%;
+    }
+    .title {
+      margin-bottom: 0px;
+    }
+    .card {
+      background-color: #fff;
+      min-height: 140px;
+      border: none;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 8px;
+      h3 {
+        font-size: 1.55rem;
+        font-weight: bolder;
+      }
+      .phone {
+        margin-bottom: 0;
+      }
+      .address {
+        margin-bottom: 8px;
+      }
+    }
+  }
+  .table {
+    background-color: #fff;
+    margin-top: 24px;
+    border-radius: 5px;
+  }
+  table tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+  }
+
+  table tr:last-child th:first-child {
+    border-bottom-left-radius: 10px;
+  }
+
+  table tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+  }
+}
+
+.action-order {
+  margin-bottom: 24px;
+  text-align: center;
+  .btn-approve {
+    background-color: rgb(33, 167, 33);
+    border-color: rgb(33, 167, 33);
+    color: #fff;
+  }
+  .btn-approve:hover {
+    background-color: rgb(10, 143, 10);
+  }
+
+  .btn {
+    padding: 0;
+    display: inline-block;
+    min-width: 80px !important;
+    padding: 4px 0;
+  }
+
+  .btn + .btn {
+    margin-left: 8px;
+  }
+
+  .btn-reject {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: #fff;
+    &:hover {
+      background-color: #c21728;
+    }
+  }
 }

@@ -1,3 +1,33 @@
 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
- list order
+  <div class="table-responsive">
+    <table class="table table-striped table-sm table-hover">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th><%= t ".title_name" %></th>
+          <th><%= t ".title_phone" %></th>
+          <th><%= t ".title_time" %></th>
+          <th><%= t ".title_quantity" %></th>
+          <th><%= t ".title_total" %></th>
+          <th><%= t ".title_status" %></th>
+          <th><%= t ".title_action" %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @result.each_with_index  do |i, index| %>
+          <tr id="table-item">
+            <td><%= index + 1 %></td>
+            <td><%= i[:fullname] %></td>
+            <td><%= i[:phone_number] %></td>
+            <td><%= i[:order_time].to_formatted_s(:long) %></td>
+            <td><%= i[:order_quatity] %></td>
+            <td><%= number_to_currency(i[:price]) %></td>
+            <td><%= i[:status] %></td>
+            <td><%= link_to "View detail", edit_admin_order_path(i[:order_id]), class: "btn btn-detail" %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <%= paginate @orders %>
+  </div>
 </main>
