@@ -1,0 +1,47 @@
+<%= form_for @products, url: admin_products_path do |f| %>
+  <div class="row">
+    <div class="col-md-12">
+      <%= render "shared/error_message", object: f.object %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group col-md-6 d-flex align-items-center">
+      <%= f.label :name, class: "title-form" %>
+      <%= f.text_field :name, class: "form-control" %>
+    </div>
+    
+    <div class="form-group col-md-6 d-flex align-items-center">
+      <%= f.label :quatity, class: "title-form" %>
+      <%= f.number_field :quatity, class: "form-control" %>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="form-group col-md-6 d-flex align-items-center">
+      <%= f.label :category_id, class: "title-form" %>
+      <%= f.select :category_id, options_for_select(
+        @categories.map { |c| [c.name, c.id]}
+      ), class: "form-control select-category" %>
+    </div>
+  
+    <div class="form-group col-md-6 d-flex align-items-center">
+      <%= f.label :price, class: "title-form" %>
+      <%= f.number_field :price, class: "form-control" %>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="form-group d-flex align-items-center col-md-6">
+      <%= f.label :image, class: "title-form" %>
+      <%= f.file_field :image, class: "form-control" %>
+    </div>
+    
+    <div class="form-group d-flex align-items-center col-md-6">
+      <%= f.label :description, class: "title-form" %>
+      <%= f.text_area :description, class: "form-control" %>
+    </div>
+  </div>
+  <div class="text-center">
+    <%= f.submit t("common.btn_submit"), class: "btn" %>
+  </div>
+<% end %>

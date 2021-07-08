@@ -5,6 +5,7 @@ class Category < ApplicationRecord
                       dependent: :destroy
 
   scope :parents, ->{where("parent_id is null")}
+  scope :childrens, ->{where.not parent_id: nil}
 
   accepts_nested_attributes_for :childrens
 end

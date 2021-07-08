@@ -110,6 +110,7 @@ Product.create!(
   quatity: 50,
   category_id: 6,
   price: 17_990_000,
+  description: "empty"
 )
 
 Product.create!(
@@ -117,6 +118,7 @@ Product.create!(
   quatity: 10,
   category_id: 6,
   price: 15_490_000,
+  description: "empty"
 )
 
 Product.create!(
@@ -124,6 +126,7 @@ Product.create!(
   quatity: 500,
   category_id: 4,
   price: 17_490_000,
+  description: "empty"
 )
 
 Product.create!(
@@ -131,6 +134,7 @@ Product.create!(
   quatity: 20,
   category_id: 4,
   price: 5_490_000,
+  description: "empty"
 )
 
 Product.create!(
@@ -138,6 +142,7 @@ Product.create!(
   quatity: 1000,
   category_id: 5,
   price: 21_990_000,
+  description: "empty"
 )
 
 Product.create!(
@@ -145,4 +150,5 @@ Product.create!(
   quatity: 1000,
   category_id: 8,
   price: 8_490_000,
+  description: "empty"
 )
