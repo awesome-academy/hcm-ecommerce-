@@ -30,6 +30,8 @@ en:
       update_order_fail: "Update order fail"
       create_product_success: "Create product success"
       load_category_fail: "Load category fail"
+      update_product_success: "Update product success"
+      load_product_fail: "Load product fail"
   admin:
     orders:
       edit:

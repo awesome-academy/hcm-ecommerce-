@@ -30,6 +30,8 @@ vi:
       update_order_fail: "Cập nhật đơn hàng thất bại"
       create_product_success: "Tạo sản phẩm thành công"
       load_category_fail: "Lấy danh mục của sản phẩm thất bại"
+      update_product_success: "Cập nhật sản phẩm thành công"
+      load_product_fail: "Lấy sản phẩm thất bại"
   admin:
     orders:
       edit:
