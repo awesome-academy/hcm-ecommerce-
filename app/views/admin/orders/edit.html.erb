@@ -87,7 +87,7 @@
       <% unless @order.rejected? %>
         <%= form_for :order, url: admin_order_path, method: :patch, html: {class: "form-inline"} do |f| %>
           <%= hidden_field_tag :status, 3 %>
-          <%= button_tag(class: "btn btn-reject") do %>
+          <%= button_tag(class: "btn btn-reject", data: { confirm: t("common.flash.confirm_delete") }) do %>
             <%= t ".btn_reject" %>
           <% end %>
         <% end %>

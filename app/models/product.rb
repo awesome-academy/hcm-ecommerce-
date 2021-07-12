@@ -20,4 +20,5 @@ class Product < ApplicationRecord
   validates :description, presence: true
 
   scope :sort_update, ->{order(updated_at: :desc)}
+  scope :active, ->{where(deleted: 0)}
 end

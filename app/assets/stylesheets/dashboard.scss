@@ -144,7 +144,7 @@ body {
       padding: 0.375rem 0.75rem;
     }
   }
-  
+
   .current {
     padding: 0.375rem 0.75rem !important;
   }
@@ -283,7 +283,7 @@ body {
 }
 
 .title-form {
-  min-width: 88px  
+  min-width: 88px;
 }
 
 #error_explanation {
@@ -298,7 +298,6 @@ body {
   }
 }
 .field_with_errors {
-
   .form-control {
     color: #c21728;
   }
@@ -306,8 +305,14 @@ body {
 
 .field_with_errors:nth-child(2) {
   width: 100%;
- .form-control {
-  border-color: #ff6f61 !important;
-  color: #c21728;
- }
+  .form-control {
+    border-color: #ff6f61 !important;
+    color: #c21728;
+  }
+}
+
+.badge {
+  position: relative;
+  top: 5px;
+  display: block;
 }
