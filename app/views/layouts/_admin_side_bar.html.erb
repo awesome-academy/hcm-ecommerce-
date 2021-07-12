@@ -27,19 +27,19 @@
         <div class="sidebar-sticky pt-3">
           <ul class="nav flex-column">
             <li class="nav-item">
-              <%= link_to admin_root_path , class: "nav-link active" do %>
+              <%= link_to admin_root_path , class: "nav-link #{controller?('admin/static_pages') ? 'active' : ''}" do %>
                 <i class="fas fa-home icon-dash"></i>
                 <%= t "common.menu.dashboard" %>
               <% end %>
             </li>
             <li class="nav-item">
-              <%= link_to admin_orders_path , class: "nav-link" do %>
+              <%= link_to admin_orders_path , class: "nav-link #{controller?('admin/orders') ? 'active' : ''}" do %>
                 <i class="far fa-file icon-dash"></i>
                 <%= t "common.menu.order" %>
               <% end %>
               </li>
             <li class="nav-item">
-              <%= link_to admin_products_path , class: "nav-link" do %>
+              <%= link_to admin_products_path , class: "nav-link #{controller?('admin/products') ? 'active' : ''}" do %>
                 <i class="fas fa-shopping-cart icon-dash"></i>
                 <%= t "common.menu.product" %>
               <% end %>

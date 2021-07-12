@@ -5,6 +5,7 @@ class Order < ApplicationRecord
   has_many :order_details, dependent: :destroy
 
   scope :sort_desc, ->{order(created_at: :desc)}
+  scope :approved, ->{where(status: 1)}
 
   enum status: {pending: 0, approved: 1, cancel: 2, rejected: 3}
 

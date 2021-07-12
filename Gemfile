@@ -7,6 +7,7 @@ gem "bcrypt"
 gem "bootsnap", ">= 1.4.4", require: false
 gem "bootstrap", "~> 4.6.0"
 gem "bootstrap-will_paginate"
+gem "chartkick"
 gem "config"
 gem "faker"
 gem "font-awesome-sass", "~> 5.10.0"

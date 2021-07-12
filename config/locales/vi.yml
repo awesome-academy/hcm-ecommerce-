@@ -62,6 +62,15 @@ vi:
         title_name: "Người mua"
         title_phone: "Số điện thoại"
         btn_view_detail: "Xem chi tiết"
+    dashboard:
+      stitle: "Dashboard"
+      btn_share: "Share"
+      btn_export: "Export"
+      this_week: "This week"
+      customer: "Customers"
+      product: "Products"
+      order: "Orders"
+      total: "Total"
     products:
       index:
         title_name: "Tên sản phẩm"
