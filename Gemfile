@@ -26,6 +26,8 @@ gem "turbolinks", "~> 5"
 gem "webpacker", "~> 5.0"
 gem "simplecov-rcov"
 gem "simplecov"
+gem "factory_bot_rails"
+gem "shoulda-matchers"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
