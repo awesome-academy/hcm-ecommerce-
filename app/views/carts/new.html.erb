@@ -20,7 +20,7 @@
                   <tr>
                     <td>
                       <div class="img">
-                        <%= image_tag "product-2.jpg", alt:"Product Image" %>
+                        <%= image_tag c[:image], alt:"Product Image" if c[:image].attached? %>
                         <p><%= c[:name] %></p>
                       </div>
                     </td>

@@ -3,13 +3,12 @@ class CartsController < ApplicationController
   before_action :current_cart
 
   def create
-    @current_cart = session[:cart] || Hash.new
-    is_have = change_quatity? unless @current_cart.empty?
-    @current_cart[params[:product_id]] = params[:quatity].to_i unless is_have
-    session[:cart] = @current_cart
-    respond_to do |format|
-      format.html{redirect_to root_path}
-      format.js
+    product_id = @current_cart[params[:product_id]].to_i
+    if enough_quatity? params[:product_id], product_id + params[:quatity].to_i
+      add_product_to_cart
+    else
+      flash[:error] = t "common.flash.quantity_invalid"
+      redirect_to session[:forwarding_url] || root_path
     end
   end
 
@@ -23,6 +22,7 @@ class CartsController < ApplicationController
   end
 
   def new
+    store_location
     @carts = summary_cart
     @sumary = @carts[-1]
     @carts.pop
@@ -36,6 +36,16 @@ class CartsController < ApplicationController
 
   private
 
+  def add_product_to_cart
+    is_have = change_quatity? unless @current_cart.empty?
+    @current_cart[params[:product_id]] = params[:quatity].to_i unless is_have
+    session[:cart] = @current_cart
+    respond_to do |format|
+      format.html{redirect_to root_path}
+      format.js
+    end
+  end
+
   def change_total cart, total
     if enough_quatity?(params[:id], total)
       cart[params[:id]] = total
@@ -48,7 +58,6 @@ class CartsController < ApplicationController
     return false unless @current_cart[params[:product_id]]
 
     @current_cart[params[:product_id]] += params[:quatity].to_i
-    true
   end
 
   def current_cart
