@@ -5,13 +5,12 @@ class SessionsController < ApplicationController
 
   def create
     sessions = params[:session]
-    is_validate = validate_login sessions
     @user = User.find_by(email: sessions[:email].downcase)
-    if is_validate && @user&.authenticate?(:password, sessions[:password])
+    if @user&.authenticate?(:password, sessions[:password])
       login
       redirect_to admin_root_path && return if is_admin?
     else
-      flash.now[:error] = message_error is_validate
+      flash.now[:error] = t "common.flash.login_invalid"
       render :new
     end
   end
@@ -24,19 +23,10 @@ class SessionsController < ApplicationController
 
   def login
     loggin_user(@user)
-    session[:remember] == "1" ? remember_user(@user) : forgot_user(@user)
+    remember = params[:session][:remember]
+    remember == "1" ? remember_user(@user) : forgot_user(@user)
     flash[:success] = t "common.flash.login_success"
     redirect_to session[:forwarding_url] || root_path
     session[:forwarding_url] = ""
-  end
-
-  def message_error value
-    t("common.flash.#{value ? 'login_invalid' : 'login_required'}")
-  end
-
-  def validate_login session
-    return false if session[:email].blank? || session[:password].blank?
-
-    true
   end
 end
