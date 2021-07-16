@@ -9,4 +9,12 @@ FactoryBot.define do
       FactoryBot.create :order_detail, order: order
     end
   end
+  
+  factory :order_without_order_detail, class: Order do
+    user {FactoryBot.create :user}
+    status {1}
+    fullname {Faker::Name.name}
+    phone_number {Faker::PhoneNumber.phone_number}
+    address {Faker::Address.full_address}
+  end
 end

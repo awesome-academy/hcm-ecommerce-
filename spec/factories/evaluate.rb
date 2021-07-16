@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :evaluate do
-    association :user
-    association :product
+    user {FactoryBot.create :user}
+    product {FactoryBot.create :product}
     content {"content data"}
     star {3}
   end

@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :order_detail do
-    association :order
-    association :product
+    order {FactoryBot.create :order}
+    product {FactoryBot.create :product}
     quatity {2}
     price {100_000}
   end
