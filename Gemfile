@@ -30,6 +30,7 @@ gem "simplecov"
 gem "simplecov-rcov"
 gem "rails-controller-testing"
 gem "shoulda-matchers"
+gem "devise"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]

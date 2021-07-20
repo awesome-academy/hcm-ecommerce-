@@ -3,13 +3,10 @@
     <span class="left"><%= t ".main_title" %></span>
     <a href="#" class="right"><%= t ".sub_title" %></a>
   </div>
-  <%= form_for :session, url: login_path, method: :post  do |f|%>
+<%= form_for :session, url:  user_session_path, method: :post  do |f|%>
     <%= f.text_field :email, class:"auth-form-input", placeholder: t(".input_email") %>
     <%= f.password_field :password, class:"auth-form-input", placeholder: t(".input_password") %>
-    <label for="remember" class="form-remember">
-      <%= f.check_box :remember, id: "remember" %>
-      <%= t ".title_remember_me" %>
-    </label>
+
      
     <div class="aside">
       <p>

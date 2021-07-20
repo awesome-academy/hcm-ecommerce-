@@ -16,7 +16,7 @@
   <input class="form-control m-0 form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
   <ul class="navbar-nav px-3">
     <li class="nav-item text-nowrap">
-      <%= link_to t("common.menu.logout"), logout_path, class: "nav-link", method: :delete %>
+      <%= link_to t("common.menu.logout"), destroy_user_session_path, class: "nav-link", method: :delete %>
     </li>
   </ul>
 </nav>
