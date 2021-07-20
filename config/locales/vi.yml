@@ -1,4 +1,10 @@
 vi:
+  pundit:
+    default: "Bạn không thể thực hiện hành động này"
+    product_policy:
+      update?: "Bạn không thể chỉnh sửa sản phẩm này!"
+      create?: "Bạn không thể tạo sản phẩm này!"
+      delete?: "Bạn không thể xóa sản phẩm này!"
   common:
     btn_submit: "Xác nhận"
     error_message:

@@ -1,6 +1,7 @@
 class Admin::ProductsController < AdminController
   before_action :load_category, only: [:create]
   before_action :load_product, only: [:edit, :update, :destroy]
+  before_action :check_permission, only: [:edit, :update, :destroy]
   before_action :load_childrens, only: [:new, :create, :edit, :update]
 
   def index
@@ -46,6 +47,10 @@ class Admin::ProductsController < AdminController
   end
 
   private
+
+  def check_permission
+    authorize @product
+  end
 
   def load_product
     @product = Product.find_by(id: params[:id])
