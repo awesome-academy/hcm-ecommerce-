@@ -4,7 +4,6 @@ class OrdersController < ApplicationController
   before_action :load_order, only: [:edit, :update]
 
   def new
-    redirect_to login_path unless loggin?
     @carts = summary_cart
     @sumary = @carts[-1]
     @carts.pop
@@ -80,10 +79,9 @@ class OrdersController < ApplicationController
     session[:cart].each do |x, y|
       product = Product.find_by(id: x)
       if product.nil?
-        session[:cart].delete(k)
+        session[:cart].delete(x)
         next
       end
-
       product[:quatity] = product[:quatity] - y
       product.save!
       price = product[:price]
