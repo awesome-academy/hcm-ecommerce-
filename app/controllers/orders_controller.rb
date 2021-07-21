@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-  before_action :is_loggin?
+  before_action :authenticate_user!
   before_action :check_admin?
   before_action :load_order, only: [:edit, :update]
 
@@ -103,8 +103,4 @@ class OrdersController < ApplicationController
     }
   end
 
-  def is_loggin?
-    store_location
-    redirect_to login_path unless loggin?
-  end
 end

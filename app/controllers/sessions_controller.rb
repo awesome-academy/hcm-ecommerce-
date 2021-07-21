@@ -1,12 +1,14 @@
-class SessionsController < ApplicationController
+class SessionsController < Devise::SessionsController
   before_action :check_admin?, except: [:destroy]
-
+  before_action :authenticate_user!, only: [:destroy]
+  
   def new; end
-
+  
   def create
+    debugger
     sessions = params[:session]
     @user = User.find_by(email: sessions[:email].downcase)
-    if @user&.authenticate?(:password, sessions[:password])
+    if @user&.authenticate?(sessions[:password])
       login
       redirect_to admin_root_path && return if is_admin?
     else
@@ -16,7 +18,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    logout_user if loggin?
+    logout_user
   end
 
   private

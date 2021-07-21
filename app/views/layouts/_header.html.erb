@@ -61,12 +61,12 @@
                   <%= link_to t("common.menu.order"), orders_path %>
                 </li>
                 <li> 
-                  <%= link_to t("common.menu.logout") ,logout_path, method: :delete %> 
+                  <%= link_to t("common.menu.logout") ,destroy_user_session_path, method: :delete %> 
                 </li>
               </ul>
             </div>
           <% else %>
-            <%= link_to login_path, class: "btn btn-login" do %>
+            <%= link_to new_user_session_path, class: "btn btn-login" do %>
               <i class="fas fa-user"></i>
               <span><%= t "static_pages.home.login" %></span>
             <% end %>
