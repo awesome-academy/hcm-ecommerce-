@@ -25,6 +25,7 @@ RSpec.describe ProductsController, type: :controller do
       it "assign @product" do
         expect(assigns(:product)).to be_nil
       end
+      ádasdasd
       
       it "don't store forwarding_url" do
         expect(session[:forwarding_url]).to be_nil
